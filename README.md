@@ -17,18 +17,12 @@ docker run -d -p 80:80 dimkaspaun/idv:nginx
 ```
 sudo systemctl start docker
 ```
+![2024-01-10_10-33-18](https://github.com/dimkaspaun/docker/assets/156161074/fa308dc3-6098-4ff2-aac4-aa6a344a3bee)
 
 ```
 docker run hello-world
 ```
-![Image alt](https://github.com/Edo1993/otus_9/raw/master/12.png)
-
-Убедиться в том, что демон стартовал без ошибок и предупреждений:
-```
-sudo systemctl status docker
-```
-В результате должно появиться подобное сообщение:
-![Image alt](https://github.com/Edo1993/otus_9/raw/master/11.png)
+![2024-01-10_10-28-16](https://github.com/dimkaspaun/docker/assets/156161074/9437f224-ab47-47ec-8cbe-9829ec772348)
 
 Dockerfile, html запилили, посмотреть, что локально работает.
 Сборка в текущей директории. 
@@ -39,17 +33,20 @@ docker build -t <имя> .
 ```
 docker run -d -p 80:80 container_name
 ```
-![Image alt](https://github.com/Edo1993/otus_9/raw/master/13.png)
+
 
 Наличие успешно собранного образа:
 ```
 docker images | grep '<имя>'
 docker ps -a
 ```
+
 Залезть в контейнер и покопаться внутри 
 ```
 docker exec -it container_name sh
 ```
+![2024-01-10_10-49-21](https://github.com/dimkaspaun/docker/assets/156161074/eee3c82f-3f7e-41d6-b653-521154db5631)
+
 
 Перед тем как запушить готовый образ, надо сделать:
 ```
@@ -60,6 +57,9 @@ docker tag YOURIMAGE YOUR_DOCKERHUB_NAME/YOURIMAGE
 ```
 docker push YOUR_DOCKERHUB_NAME/YOURIMAGE
 ```
+![2024-01-10_11-23-25](https://github.com/dimkaspaun/docker/assets/156161074/1a16b127-2fa0-4ad0-8ac2-26d1c4874a65)
+
+
 # *Определите разницу между контейнером и образом*
 
    Docker-образ — это read-only шаблон, из которого создается контейнер. Docker позволяет создавать новые образы, обновлять существующие, скачивать образы, созданные другими людьми. Образы — это компонента сборки docker-а.
