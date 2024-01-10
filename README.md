@@ -48,6 +48,10 @@ docker exec -it container_name sh
 ![2024-01-10_10-49-21](https://github.com/dimkaspaun/docker/assets/156161074/eee3c82f-3f7e-41d6-b653-521154db5631)
 
 
+![2024-01-10_10-50-29](https://github.com/dimkaspaun/docker/assets/156161074/ed754c89-4810-41f4-a0de-b1d0be54761a)
+
+
+
 Перед тем как запушить готовый образ, надо сделать:
 ```
 docker login
