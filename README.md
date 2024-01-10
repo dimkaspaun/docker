@@ -8,7 +8,7 @@
 # кастомный образ nginx на базе alpine
 
 Мой образ на докерхабе
-https://hub.docker.com/repository/docker/edo2681/nginx-alpine](https://hub.docker.com/r/dimkaspaun/idv
+https://hub.docker.com/r/dimkaspaun/idv/
 ```
 docker pull dimkaspaun/idv:nginx
 docker run -d -p 80:80 dimkaspaun/idv:nginx
