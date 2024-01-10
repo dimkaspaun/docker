@@ -1,5 +1,4 @@
-# otus_9
-Docker
+#Docker
 
 *Задание:*
 * 1 *Создайте свой кастомный образ nginx на базе alpine. После запуска nginx должен отдавать кастомную страницу (достаточно изменить дефолтную страницу nginx). Собранный образ необходимо запушить в dockerhub и дать ссылку на ваш репозиторий.*
@@ -9,31 +8,16 @@ Docker
 # кастомный образ nginx на базе alpine
 
 Мой образ на докерхабе
-https://hub.docker.com/repository/docker/edo2681/nginx-alpine
+https://hub.docker.com/repository/docker/edo2681/nginx-alpine](https://hub.docker.com/r/dimkaspaun/idv
 ```
-docker pull edo2681/nginx-alpine
-docker run --name nginx-alpine -dp 82:80 edo2681/nginx-alpine
-```
-
-пишу для себя, потому что потом забуду.
-* установка docker на centos 7
-Обновить локальную базу пакетов:
-```
-sudo yum check-update
-```
-Добавим репозиторий, загрузим последнюю версию ПО и установит его:
-```
-curl -fsSL https://get.docker.com/ | sh
-```
-Чтобы запускать докер не от имени пользователя root добавим пользователя в созданную после установки группу docker:
-```
-sudo usermod -aG docker $USER
+docker pull dimkaspaun/idv:nginx
+docker run -d -p 80:80 dimkaspaun/idv:nginx
 ```
 Запустим демон Docker после окончания установки:
 ```
 sudo systemctl start docker
 ```
-Чтобы проверить, что команды выполняются от имени текущего пользователя - Log out / log back
+
 ```
 docker run hello-world
 ```
@@ -53,7 +37,7 @@ docker build -t <имя> .
 ```
 Запустить контейнер 
 ```
-docker run -d -p 82:80 container_name
+docker run -d -p 80:80 container_name
 ```
 ![Image alt](https://github.com/Edo1993/otus_9/raw/master/13.png)
 
